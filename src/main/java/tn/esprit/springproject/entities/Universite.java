@@ -1,40 +1,25 @@
 package tn.esprit.springproject.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 @Entity
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Universite implements Serializable {
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO)
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
     private long idUniversite;
     private String nomUniversite;
     private String adresseUniversite;
+    @OneToOne
+    private Foyer foyer;
 
-    public long getIdUniversite() {
-        return idUniversite;
-    }
 
-    public void setIdUniversite(long idUniversite) {
-        this.idUniversite = idUniversite;
-    }
-
-    public void setNomUniversite(String nomUniversite) {
-        this.nomUniversite = nomUniversite;
-    }
-
-    public void setAdresseUniversite(String adresseUniversite) {
-        this.adresseUniversite = adresseUniversite;
-    }
-
-    public String getNomUniversite() {
-        return nomUniversite;
-    }
-
-    public String getAdresseUniversite() {
-        return adresseUniversite;
-    }
 }
