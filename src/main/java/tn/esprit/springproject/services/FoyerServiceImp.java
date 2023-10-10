@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class FoyerServiceImp implements IFoyer{
+
     @Autowired
     private FoyerRepository foyerRepository;
     @Override
