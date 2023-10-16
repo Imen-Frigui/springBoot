@@ -1,10 +1,7 @@
 package tn.esprit.springproject.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,6 +9,7 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString

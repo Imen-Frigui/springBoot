@@ -18,9 +18,18 @@ public class EtudiantController {
         return etudiantServiceImp.addEtudiant(e);
     }
 
-    @PutMapping("/editEd")
-    public Etudiant updateFoyer(@RequestBody Etudiant e){
-        return etudiantServiceImp.updateEtudaint(e);
+    @PutMapping("/editEd/{id}")
+    public Etudiant updateEtudiant(@RequestBody Etudiant e, @PathVariable long id){
+        Etudiant etudiant = etudiantServiceImp.getById(id);
+        System.out.println(etudiant.toString());
+        etudiant.setCin(etudiant.getCin());
+        etudiant.setNomEt(etudiant.getNomEt());
+        etudiant.setPrenomET(etudiant.getPrenomET());
+        etudiant.setEcole(etudiant.getEcole());
+        etudiant.setDateNaissance(etudiant.getDateNaissance());
+        etudiant.setReservationList(etudiant.getReservationList());
+
+        return etudiant;
     }
 
     @GetMapping("/getEd")

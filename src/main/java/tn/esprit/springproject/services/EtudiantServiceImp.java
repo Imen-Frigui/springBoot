@@ -7,7 +7,7 @@ import tn.esprit.springproject.repositories.EtudiantRepository;
 
 import java.util.List;
 
-@Service
+@Service("EtudiantServiceImp")
 @AllArgsConstructor
 public class EtudiantServiceImp implements IEtudiant{
 
