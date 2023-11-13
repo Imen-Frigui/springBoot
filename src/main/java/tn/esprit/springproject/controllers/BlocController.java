@@ -17,7 +17,7 @@ import java.util.Set;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/bloc")
-@Tag(name="bloc")
+@Tag(name="bloc API")
 public class BlocController {
 
     public BlocSericeImp blocSericeImp;

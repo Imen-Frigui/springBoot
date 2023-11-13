@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/etudiant")
-@Tag(name = "etudiant")
+@Tag(name = "etudiant API")
 public class EtudiantController {
     public EtudiantServiceImp etudiantServiceImp;
 

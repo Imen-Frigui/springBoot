@@ -1,4 +1,7 @@
 package tn.esprit.springproject.repositories;
 
-public interface ChambreRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import tn.esprit.springproject.entities.Chamber;
+
+public interface ChambreRepository extends JpaRepository<Chamber,Long> {
 }

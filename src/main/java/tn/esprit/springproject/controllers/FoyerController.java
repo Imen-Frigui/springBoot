@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/foyer")
-@Tag(name = "foyer")
+@Tag(name = "foyer API")
 public class FoyerController {
     @Autowired
     private FoyerServiceImp foyerServiceImp;

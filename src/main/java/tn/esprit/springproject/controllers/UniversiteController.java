@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/universite")
-@Tag(name = "universite")
+@Tag(name = "universite API")
 @AllArgsConstructor
 public class UniversiteController {
 
