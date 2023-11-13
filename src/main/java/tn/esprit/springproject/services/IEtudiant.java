@@ -10,4 +10,5 @@ public interface IEtudiant {
     public List<Etudiant> getAllEtudiants();
     public Etudiant getById(long id);
     public void deleteEtudiant (long id);
+    public Etudiant findEtudiantByNom(String nom);
 }

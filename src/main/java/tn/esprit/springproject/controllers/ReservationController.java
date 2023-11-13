@@ -44,4 +44,10 @@ public class ReservationController {
         return reservationServiceImp.findReservationsByEtudiantListContains(etudiant);
 
     }
+    @GetMapping("/getReservationByEtudiantNom/{nom}")
+    public List<Reservation> findReservationByEtudiantNom(@PathVariable String nom){
+        Etudiant etudiant = etudiantServiceImp.findEtudiantByNom(nom);
+        return reservationServiceImp.findReservationsByEtudiantListContains(etudiant);
+
+    }
 }

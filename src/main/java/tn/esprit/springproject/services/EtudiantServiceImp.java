@@ -36,4 +36,9 @@ public class EtudiantServiceImp implements IEtudiant{
     public void deleteEtudiant(long id) {
         etudiantRepository.deleteById(id);
     }
+
+    @Override
+    public Etudiant findEtudiantByNom(String nom) {
+        return etudiantRepository.findEtudiantByNomEt(nom);
+    }
 }
