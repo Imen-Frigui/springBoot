@@ -1,5 +1,6 @@
 package tn.esprit.springproject.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,5 +26,6 @@ public class Etudiant implements Serializable {
     private Date dateNaissance;
     private boolean estValide;
     @ManyToMany(mappedBy = "etudiantList")
+    @JsonBackReference
     private List <Reservation> reservationList;
 }

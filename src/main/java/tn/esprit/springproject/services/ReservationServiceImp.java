@@ -2,6 +2,7 @@ package tn.esprit.springproject.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import tn.esprit.springproject.entities.Etudiant;
 import tn.esprit.springproject.entities.Reservation;
 import tn.esprit.springproject.repositories.ReservationRepository;
 
@@ -35,5 +36,10 @@ public class ReservationServiceImp implements IReservation{
     @Override
     public void deleteReservation(long id) {
         reservationRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Reservation> findReservationsByEtudiantListContains(Etudiant etudiant) {
+        return reservationRepository.findReservationsByEtudiantListContains(etudiant);
     }
 }
