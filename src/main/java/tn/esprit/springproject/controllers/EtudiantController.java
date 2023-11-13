@@ -1,5 +1,6 @@
 package tn.esprit.springproject.controllers;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.springproject.entities.Etudiant;
@@ -10,6 +11,8 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/etudiant")
+@Tag(name = "etudiant")
 public class EtudiantController {
     public EtudiantServiceImp etudiantServiceImp;
 
@@ -33,17 +36,17 @@ public class EtudiantController {
     }
 
     @GetMapping("/getEd")
-    public List<Etudiant> findAllFoyer(){
+    public List<Etudiant> findAllEtudaint(){
         return etudiantServiceImp.getAllEtudiants();
     }
 
     @GetMapping("/getEd/{IdE}")
-    public Etudiant findFoyerById(@PathVariable long IdE){
+    public Etudiant findEtudiantById(@PathVariable long IdE){
         return  etudiantServiceImp.getById(IdE);
     }
 
     @DeleteMapping("/delete/{IdE}")
-    public void deleteFoyerById(@PathVariable long IdE){
+    public void deleteEtudiantById(@PathVariable long IdE){
         etudiantServiceImp.deleteEtudiant(IdE);
     }
 }
