@@ -33,9 +33,7 @@ public class ChambreController {
         return  chambreServiceImp.getChamberById(IdC);
     }
     @DeleteMapping("/delete/{IdC}")
-    public void deleteChamberById(@PathVariable long IdC){
-        chambreServiceImp.deleteChamber(IdC);
-    }
+    public void deleteChamberById(@PathVariable long IdC){ chambreServiceImp.deleteChamber(IdC); }
 
 
 }
