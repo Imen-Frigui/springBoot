@@ -8,6 +8,7 @@ import tn.esprit.springproject.entities.Chamber;
 import tn.esprit.springproject.entities.Etudiant;
 import tn.esprit.springproject.entities.TypeChambre;
 import tn.esprit.springproject.repositories.BolcRepository;
+import tn.esprit.springproject.repositories.ChambreRepository;
 import tn.esprit.springproject.repositories.EtudiantRepository;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.Set;
 public class BlocSericeImp implements IBloc {
 
     public BolcRepository bolcRepository;
+    public ChambreRepository chambreRepository;
     @Override
     public Bloc addBloc(Bloc B) { return bolcRepository.save(B); }
     @Override
@@ -31,6 +33,16 @@ public class BlocSericeImp implements IBloc {
     @Override
     public List<Bloc> findByChamberListTypeC(TypeChambre type) {
         return bolcRepository.findByChamberListTypeC(type);
+    }
+
+    @Override
+    public Bloc getBlocByChambreId(long chambreId) {
+        Chamber chambre = chambreRepository.findById(chambreId).orElse(null);
+        if (chambre!=null){
+            return chambre.getBloc();
+        }else {
+            return null;
+        }
     }
 
 }

@@ -45,5 +45,9 @@ public class BlocController {
     public List<Bloc> findBlocByTypeC(@PathVariable TypeChambre type){
         return blocSericeImp.findByChamberListTypeC(type);
     }
+    @GetMapping("/getBlocByChambre/{chambreId}")
+    public Bloc getBlocByChambre(@PathVariable long chambreId){
+        return blocSericeImp.getBlocByChambreId(chambreId);
+    }
 
 }
