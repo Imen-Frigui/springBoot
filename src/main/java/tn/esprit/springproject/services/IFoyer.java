@@ -10,6 +10,6 @@ public interface IFoyer {
     public Foyer updateFoyer(Foyer f);
     public List<Foyer> findAllFoyer();
     public Foyer findById(long idF);
-    public void deleteFoyer (long idF);
+    public void deleteFoyer(long idF);
     public Foyer getByNomFoyer(String nomF);
 }

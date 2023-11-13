@@ -50,4 +50,12 @@ public class SpringDocConfig {
                 .pathsToExclude("**")
                 .build();
     }
+    @Bean
+    public GroupedOpenApi universitePublicApi() {
+        return GroupedOpenApi.builder()
+                .group("Only universite Management API")
+                .pathsToMatch("/universite/**")
+                .pathsToExclude("**")
+                .build();
+    }
 }
