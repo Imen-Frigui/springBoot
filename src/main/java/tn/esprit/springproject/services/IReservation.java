@@ -13,5 +13,7 @@ public interface IReservation {
     public Reservation getReservationrById(long id);
     public void deleteReservation(long id);
     public List<Reservation> findReservationsByEtudiantListContains(Etudiant etudiant);
+    public List<Reservation> findReservationsByEtudiantNomContainsAB();
+
 
 }

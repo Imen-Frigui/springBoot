@@ -50,4 +50,8 @@ public class ReservationController {
         return reservationServiceImp.findReservationsByEtudiantListContains(etudiant);
 
     }
+    @GetMapping("/getReservationByEtudiantAB")
+    public List<Reservation> findReservationByEtudiantNom(){
+        return reservationServiceImp.findReservationsByEtudiantNomContainsAB();
+    }
 }

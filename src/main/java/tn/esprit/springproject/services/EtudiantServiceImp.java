@@ -41,4 +41,10 @@ public class EtudiantServiceImp implements IEtudiant{
     public Etudiant findEtudiantByNom(String nom) {
         return etudiantRepository.findEtudiantByNomEt(nom);
     }
+
+    @Override
+    public List<Etudiant> findetudiantsStartsWith() {
+        String nom = "AB";
+        return etudiantRepository.findEtudiantByNomEtStartingWith(nom);
+    }
 }

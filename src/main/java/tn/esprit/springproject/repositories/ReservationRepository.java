@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
     List<Reservation> findReservationsByEtudiantListContains(Etudiant etudiant);
+    List<Reservation> findReservationsByEtudiantListNomEtStartingWith(String prefix);
+
 }

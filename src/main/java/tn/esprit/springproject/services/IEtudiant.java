@@ -11,4 +11,5 @@ public interface IEtudiant {
     public Etudiant getById(long id);
     public void deleteEtudiant (long id);
     public Etudiant findEtudiantByNom(String nom);
+    public List<Etudiant> findetudiantsStartsWith();
 }
