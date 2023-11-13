@@ -25,22 +25,18 @@ public class BlocController {
     public Bloc addBloc(@RequestBody Bloc b){
         return blocSericeImp.addBloc(b);
     }
-
     @PutMapping("/edit")
     public Bloc updateBloc(@RequestBody Bloc b){
         return blocSericeImp.updateBloc(b);
     }
-
     @GetMapping("/get")
     public List<Bloc> findAllBloc(){
         return blocSericeImp.getAllBloc();
     }
-
     @GetMapping("/get/{IdB}")
     public Bloc findBlocById(@PathVariable long IdB){
         return blocSericeImp.getById(IdB);
     }
-
     @DeleteMapping("/delete/{IdB}")
     public void deleteFoyerById(@PathVariable long IdB){
         blocSericeImp.deleteBloc(IdB);
@@ -49,5 +45,4 @@ public class BlocController {
     public List<Bloc> findBlocByTypeC(@PathVariable TypeChambre type){
         return blocSericeImp.findByChamberListTypeC(type);
     }
-
 }

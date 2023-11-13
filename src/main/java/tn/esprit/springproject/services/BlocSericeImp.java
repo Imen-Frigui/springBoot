@@ -18,26 +18,15 @@ public class BlocSericeImp implements IBloc {
 
     public BolcRepository bolcRepository;
     @Override
-    public Bloc addBloc(Bloc B) {
-        return bolcRepository.save(B);
-    }
+    public Bloc addBloc(Bloc B) { return bolcRepository.save(B); }
     @Override
-    public Bloc updateBloc(Bloc B) {
-        return bolcRepository.save(B);
-    }
+    public Bloc updateBloc(Bloc B) { return bolcRepository.save(B); }
     @Override
-    public List<Bloc> getAllBloc() {
-        return bolcRepository.findAll();
-    }
+    public List<Bloc> getAllBloc() { return bolcRepository.findAll(); }
     @Override
-    public Bloc getById(long id) {
-        return bolcRepository.getById(id);
-    }
+    public Bloc getById(long id) { return bolcRepository.findById(id).orElse(null); }
     @Override
-    public void deleteBloc(long id) {
-        bolcRepository.deleteById(id);
-
-    }
+    public void deleteBloc(long id) { bolcRepository.deleteById(id); }
     @Override
     public List<Bloc> findByChamberListTypeC(TypeChambre type) {
         return bolcRepository.findByChamberListTypeC(type);
