@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.springproject.entities.Bloc;
+import tn.esprit.springproject.entities.Chamber;
 import tn.esprit.springproject.entities.Etudiant;
 import tn.esprit.springproject.entities.TypeChambre;
 import tn.esprit.springproject.repositories.BolcRepository;
@@ -31,4 +32,5 @@ public class BlocSericeImp implements IBloc {
     public List<Bloc> findByChamberListTypeC(TypeChambre type) {
         return bolcRepository.findByChamberListTypeC(type);
     }
+
 }

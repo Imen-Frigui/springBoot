@@ -45,4 +45,5 @@ public class BlocController {
     public List<Bloc> findBlocByTypeC(@PathVariable TypeChambre type){
         return blocSericeImp.findByChamberListTypeC(type);
     }
+
 }

@@ -11,4 +11,5 @@ public interface IChambre {
     public List<Chamber> getAllChamber();
     public Chamber getChamberById(long id);
     public void deleteChamber(long id);
+    public List<Chamber> findChambresByBloc(Bloc B);
 }

@@ -2,6 +2,7 @@ package tn.esprit.springproject.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import tn.esprit.springproject.entities.Bloc;
 import tn.esprit.springproject.entities.Chamber;
 import tn.esprit.springproject.repositories.ChambreRepository;
 
@@ -35,4 +36,7 @@ public class ChambreServiceImp implements IChambre{
     public void deleteChamber(long id) {
         chambreRepository.deleteById(id);
     }
+
+   @Override
+   public List<Chamber> findChambresByBloc(Bloc B) { return chambreRepository.findChambersByBloc(B); }
 }

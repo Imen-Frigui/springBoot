@@ -10,4 +10,5 @@ import java.util.Set;
 
 public interface BolcRepository extends JpaRepository<Bloc, Long> {
     List<Bloc> findByChamberListTypeC(TypeChambre type);
+
 }
