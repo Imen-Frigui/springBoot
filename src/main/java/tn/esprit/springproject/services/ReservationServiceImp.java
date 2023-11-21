@@ -47,5 +47,5 @@ public class ReservationServiceImp implements IReservation{
     public List<Reservation> findReservationsByEtudiantNomContainsAB() {
         return reservationRepository.findReservationsByEtudiantListNomEtStartingWith("AB");
     }
-    
+
 }
