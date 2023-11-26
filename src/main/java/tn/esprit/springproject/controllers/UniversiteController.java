@@ -3,7 +3,6 @@ package tn.esprit.springproject.controllers;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.springproject.entities.Foyer;
 import tn.esprit.springproject.entities.Universite;
 import tn.esprit.springproject.services.UniversiteServiceImp;
 
@@ -33,7 +32,7 @@ public class UniversiteController {
         return  universiteServiceImp.findById(IdU);
     }
     @DeleteMapping("/delete/{IdU}")
-    public void deleteUniversiteById(@PathVariable long Idu){
-        universiteServiceImp.deleteUniversite(Idu);
+    public void deleteUniversiteById(@PathVariable long IdU){
+        universiteServiceImp.deleteUniversite(IdU);
     }
 }
