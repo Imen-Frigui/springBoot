@@ -3,7 +3,9 @@ package tn.esprit.springproject.controllers;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.springproject.entities.Foyer;
 import tn.esprit.springproject.entities.Universite;
+import tn.esprit.springproject.services.FoyerServiceImp;
 import tn.esprit.springproject.services.UniversiteServiceImp;
 
 import java.util.List;
@@ -15,6 +17,7 @@ import java.util.List;
 public class UniversiteController {
 
     public UniversiteServiceImp universiteServiceImp;
+    public FoyerServiceImp foyerServiceImp;
     @PostMapping("/add")
     public Universite addUniversite(@RequestBody Universite u){
         return universiteServiceImp.addUniversite(u);
@@ -34,5 +37,10 @@ public class UniversiteController {
     @DeleteMapping("/delete/{IdU}")
     public void deleteUniversiteById(@PathVariable long IdU){
         universiteServiceImp.deleteUniversite(IdU);
+    }
+    @PostMapping("/addUniversityAndAssignToFoyer/{foyerId}")
+    public Universite addUniversityAndAssignToFoyer(@RequestBody Universite universite, @PathVariable long foyerId) {
+        Foyer foyer = foyerServiceImp.findById(foyerId);
+        return universiteServiceImp.addUniversityAndAssignToFoyer(universite, foyer);
     }
 }
