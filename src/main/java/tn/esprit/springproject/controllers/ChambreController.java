@@ -43,4 +43,9 @@ public class ChambreController {
         Bloc bloc = blocSericeImp.getById(blocId);
         return chambreServiceImp.findChambresByBloc(bloc);
     }
+    @GetMapping("/getchaambres/{nom}")
+    public List<Chamber> findchmbressss(@PathVariable String nom){
+
+        return chambreServiceImp.findChambersByBloc_Foyer_Universite_NomUniversite(nom);
+    }
 }

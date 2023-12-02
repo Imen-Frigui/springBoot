@@ -39,4 +39,8 @@ public class ChambreServiceImp implements IChambre{
 
    @Override
    public List<Chamber> findChambresByBloc(Bloc B) { return chambreRepository.findChambersByBloc(B); }
+
+    public List<Chamber> findChambersByBloc_Foyer_Universite_NomUniversite(String nom){
+        return chambreRepository.findChambersByBloc_Foyer_Universite_NomUniversite(nom);
+    }
 }
